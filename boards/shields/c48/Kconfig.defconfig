@@ -1,0 +1,14 @@
+if SHIELD_C48_LEFT
+    config ZMK_KEYBOARD_NAME
+        default "c48"
+    config ZMK_SPLIT_BLE_ROLE_CENTRAL
+        default y
+endif
+
+if SHIELD_C48_RIGHT
+    config ZMK_KEYBOARD_NAME
+        default "c48 Right"
+endif
+
+config ZMK_SPLIT
+    default y
