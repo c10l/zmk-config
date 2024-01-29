@@ -22,3 +22,9 @@ build:
 	( cd $(WORKSPACE)/zmk/app ; west build -d "$(WORKSPACE)/build/left" -b "nice_nano_v2" -- -DZMK_CONFIG=$(WORKSPACE)/config -DSHIELD="c48_left" -DZMK_CONFIG=$(WORKSPACE) )
 	( cd $(WORKSPACE)/zmk/app ; west build -d "$(WORKSPACE)/build/right" -b "nice_nano_v2" -- -DZMK_CONFIG=$(WORKSPACE)/config -DSHIELD="c48_right" -DZMK_CONFIG=$(WORKSPACE) )
 .PHONY: build
+
+install_left:
+	cp "$(WORKSPACE)/build/left/zephyr/zmk.uf2" /Volumes/NICENANO
+
+install_right:
+	cp "$(WORKSPACE)/build/right/zephyr/zmk.uf2" /Volumes/NICENANO
