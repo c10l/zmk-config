@@ -11,7 +11,6 @@ update:
 .PHONY: update
 
 cleanup:
-	rm -rf $(WORKSPACE)/zmk/zephyr
 	rm -rf $(WORKSPACE)/zmk/.west
 	rm -rf $(WORKSPACE)/zmk/modules
 	rm -rf $(WORKSPACE)/zmk/zmk
